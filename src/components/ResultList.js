@@ -1,10 +1,16 @@
 import React from "react";
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import ResultsDetail from "./ResultsDetail";
+import { useNavigation } from "@react-navigation/native";
 import ResultsShowScreen from "../screens/ResultsShowScreen";
 
 
-const ResultList = ({ title, results, navigation }) => {
+const ResultList = ({ title, results }) => {
+
+        const navigation = useNavigation();
+
+
+
     return (
         <View style={styles.container}>
             <Text style={styles.title}>
@@ -13,12 +19,11 @@ const ResultList = ({ title, results, navigation }) => {
             <FlatList 
             horizontal
             showsHorizontalScrollIndicator= {false}
-
             data={results}
             keyExtractor={(results) => results.id}
             renderItem={({item}) => {
                 return (
-                <TouchableOpacity onPress={()=> navigation.navigate("ResultShow")}>
+                <TouchableOpacity onPress={()=> navigation.navigate("ResultShow", {id: item.id})}>
                     <ResultsDetail result={item} />;
                 </TouchableOpacity>
                 )
