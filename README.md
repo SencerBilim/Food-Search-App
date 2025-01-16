@@ -9,9 +9,9 @@ This is a simple React Native project created for learning purposes. It uses the
 
 ## Screenshots
 ![food1](https://github.com/user-attachments/assets/7b4af572-af83-43d2-94d9-21faa8a05014)
-)
+
 ![food2](https://github.com/user-attachments/assets/71e528a8-cd1e-419b-b0da-f6cf5ba48be9)
-)
+
 
 ## Usage
 Open the app on your device or simulator/emulator.
